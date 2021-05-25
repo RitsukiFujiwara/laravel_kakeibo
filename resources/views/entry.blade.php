@@ -15,15 +15,37 @@
         </form>
         <main>
             <div>
-                <form action="#" method="post">
+                <form method="post">
+                @csrf
+                    <p>月：
+                        <select name="month">
+                            <option value="1">1月</option>
+                            <option value="2">2月</option>
+                            <option value="3">3月</option>
+                            <option value="4">4月</option>
+                            <option value="5">5月</option>
+                            <option value="6">6月</option>
+                            <option value="7">7月</option>
+                            <option value="8">8月</option>
+                            <option value="9">9月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+                        </select>
+                    </p>
                     <p>金額：
                     <input type="text" name="money"></p>
                     <p>カテゴリー：
-                    <input type="text" name="mail"></p>
-                    <p>概要：
-                    <input type="text" name="mail"></p>
+                        <select name="category">
+                            <option value="食費">食費</option>
+                            <option value="記念日費">記念日費</option>
+                        </select>
+                    </p>
+                    <p>詳細：
+                    <input type="text" name="detail"></p>
                     <p>備考：
-                    <input type="text" name="mail"></p>
+                    <input type="text" name="memo"></p>
+                    <button type="submit">登録</button>
                 </form>
             </div>
         </main>
