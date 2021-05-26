@@ -15,7 +15,6 @@ class KakeiboController extends Controller
             'detail' => $request->input('detail'),
             'memo' => $request->input('memo'),   
         ]);
-        // dd($month);
         $money_info->save();
 
         return redirect('/test');

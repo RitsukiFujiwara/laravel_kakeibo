@@ -2,6 +2,7 @@
     <head>
         <meta charset="utf-8">
         <title>家計簿</title>
+        <!-- <link rel="stylesheet" href="/css/app.css"> -->
     </head>
     <body>
         <a href="">HOME</a><br>
@@ -48,6 +49,8 @@
                     <button type="submit">登録</button>
                 </form>
             </div>
+            <div id="app"></div>
+            <script src="{{ mix('js/app.js') }}"></script>
         </main>
     </body>
 </html>
