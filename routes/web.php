@@ -27,7 +27,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('entry');
 });
-Route::post('/test', 'App\Http\Controllers\KakeiboController@create');
+Route::post('/test', 'MoneyInfoController@store');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
