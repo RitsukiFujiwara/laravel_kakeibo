@@ -24,11 +24,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/test', function () {
+// Route::get('/test', function () {
+//     return view('entry');
+// });
+Route::get('/{all}', function () {
     return view('entry');
-});
+})->where(['all' => '.*']);
 Route::post('/test', 'MoneyInfoController@store');
-
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
